@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  SSubbs
+//  CustomTabbar
 //
-//  Created by 김수영 on 4/12/24.
+//  Created by 김수영 on 4/9/24.
 //
 
 import UIKit
