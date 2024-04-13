@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class mainTabBarController: UITabBarController {
 
@@ -20,7 +22,7 @@ class mainTabBarController: UITabBarController {
     }
     
     func isFirstEntry() -> Bool {
-        // ViewController의 진입 여부를 확인합니다.
+        // ViewController의 진입 여부를 확인
         let key = "ViewControllerFirstEntry"
         let firstEntry = UserDefaults.standard.bool(forKey: key)
         

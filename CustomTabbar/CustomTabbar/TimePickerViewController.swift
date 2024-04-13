@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class TimePickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 

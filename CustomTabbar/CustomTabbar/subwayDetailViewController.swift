@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class subwayDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
@@ -24,7 +26,7 @@ class subwayDetailViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // tag를 사용하여 원하는 뷰를 찾습니다.
+        
         
     }
     
@@ -76,7 +78,7 @@ class subwayDetailViewController: UIViewController, UITableViewDelegate, UITable
     }
     @IBAction func actTimeSelectButton(_ sender: Any) {
         if let timePickerViewController = storyboard?.instantiateViewController(withIdentifier: "TimePickerViewController") {
-            // 모달 뷰의 사이즈 조정 (예제는 커스텀 사이즈를 설정하는 방법)
+            // 모달 뷰의 사이즈 조정 
             if #available(iOS 15.0, *) {
                 timePickerViewController.modalPresentationStyle = .pageSheet
                 if let sheetController = timePickerViewController.sheetPresentationController {

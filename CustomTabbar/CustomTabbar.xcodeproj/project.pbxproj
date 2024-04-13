@@ -13,6 +13,7 @@
 		8979C8562BC77033003D6591 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C8552BC77033003D6591 /* Model.swift */; };
 		8979C8582BC7DC05003D6591 /* subwayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C8572BC7DC05003D6591 /* subwayDetailViewController.swift */; };
 		8979C85A2BC96E6F003D6591 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C8592BC96E6F003D6591 /* TimePickerViewController.swift */; };
+		8979C85C2BCA71CB003D6591 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C85B2BCA71CB003D6591 /* LocationManager.swift */; };
 		8999760F2BC648A400A9801C /* modalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999760E2BC648A400A9801C /* modalViewController.swift */; };
 		899976112BC64C7200A9801C /* subwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899976102BC64C7200A9801C /* subwayViewController.swift */; };
 		899976132BC64EBF00A9801C /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899976122BC64EBF00A9801C /* UIColor+Extention.swift */; };
@@ -28,6 +29,7 @@
 		8979C8552BC77033003D6591 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8979C8572BC7DC05003D6591 /* subwayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subwayDetailViewController.swift; sourceTree = "<group>"; };
 		8979C8592BC96E6F003D6591 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		8979C85B2BCA71CB003D6591 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		8999760E2BC648A400A9801C /* modalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modalViewController.swift; sourceTree = "<group>"; };
 		899976102BC64C7200A9801C /* subwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subwayViewController.swift; sourceTree = "<group>"; };
 		899976122BC64EBF00A9801C /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				8999760E2BC648A400A9801C /* modalViewController.swift */,
 				8979C8572BC7DC05003D6591 /* subwayDetailViewController.swift */,
 				8979C8592BC96E6F003D6591 /* TimePickerViewController.swift */,
+				8979C85B2BCA71CB003D6591 /* LocationManager.swift */,
 				899976122BC64EBF00A9801C /* UIColor+Extention.swift */,
 				8979C8552BC77033003D6591 /* Model.swift */,
 				89EC19BD2BC51FF900D74BEB /* Main.storyboard */,
@@ -173,6 +176,7 @@
 			files = (
 				8979C8582BC7DC05003D6591 /* subwayDetailViewController.swift in Sources */,
 				8979C8562BC77033003D6591 /* Model.swift in Sources */,
+				8979C85C2BCA71CB003D6591 /* LocationManager.swift in Sources */,
 				899976132BC64EBF00A9801C /* UIColor+Extention.swift in Sources */,
 				8999760F2BC648A400A9801C /* modalViewController.swift in Sources */,
 				8979C85A2BC96E6F003D6591 /* TimePickerViewController.swift in Sources */,
