@@ -47,7 +47,7 @@ struct SubwayStation: Codable {
 
 // MARK: - NearbySubwayStationSearchResult
 struct NearbySubwayStationSearchResult: Codable {
-    let result: NearbySubwayStationResult
+    let result: NearbySubwayStationResult?
 }
 
 // MARK: - Result

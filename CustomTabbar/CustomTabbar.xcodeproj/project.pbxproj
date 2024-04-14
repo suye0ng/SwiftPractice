@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8979C84D2BC76D86003D6591 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8979C84C2BC76D86003D6591 /* Alamofire */; };
-		8979C84F2BC76D86003D6591 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8979C84E2BC76D86003D6591 /* AlamofireDynamic */; };
-		8979C8522BC76DCF003D6591 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8979C8512BC76DCF003D6591 /* Kingfisher */; };
 		8979C8562BC77033003D6591 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C8552BC77033003D6591 /* Model.swift */; };
 		8979C8582BC7DC05003D6591 /* subwayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C8572BC7DC05003D6591 /* subwayDetailViewController.swift */; };
 		8979C85A2BC96E6F003D6591 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979C8592BC96E6F003D6591 /* TimePickerViewController.swift */; };
@@ -17,6 +14,8 @@
 		8999760F2BC648A400A9801C /* modalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999760E2BC648A400A9801C /* modalViewController.swift */; };
 		899976112BC64C7200A9801C /* subwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899976102BC64C7200A9801C /* subwayViewController.swift */; };
 		899976132BC64EBF00A9801C /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899976122BC64EBF00A9801C /* UIColor+Extention.swift */; };
+		89E879B22BCB9E9F003596D5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 89E879B12BCB9E9F003596D5 /* Alamofire */; };
+		89E879B42BCB9E9F003596D5 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 89E879B32BCB9E9F003596D5 /* AlamofireDynamic */; };
 		89EC19B82BC51FF900D74BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EC19B72BC51FF900D74BEB /* AppDelegate.swift */; };
 		89EC19BA2BC51FF900D74BEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EC19B92BC51FF900D74BEB /* SceneDelegate.swift */; };
 		89EC19BF2BC51FF900D74BEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 89EC19BE2BC51FF900D74BEB /* Base */; };
@@ -48,9 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8979C8522BC76DCF003D6591 /* Kingfisher in Frameworks */,
-				8979C84D2BC76D86003D6591 /* Alamofire in Frameworks */,
-				8979C84F2BC76D86003D6591 /* AlamofireDynamic in Frameworks */,
+				89E879B22BCB9E9F003596D5 /* Alamofire in Frameworks */,
+				89E879B42BCB9E9F003596D5 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,9 +109,8 @@
 			);
 			name = CustomTabbar;
 			packageProductDependencies = (
-				8979C84C2BC76D86003D6591 /* Alamofire */,
-				8979C84E2BC76D86003D6591 /* AlamofireDynamic */,
-				8979C8512BC76DCF003D6591 /* Kingfisher */,
+				89E879B12BCB9E9F003596D5 /* Alamofire */,
+				89E879B32BCB9E9F003596D5 /* AlamofireDynamic */,
 			);
 			productName = CustomTabbar;
 			productReference = 89EC19B42BC51FF900D74BEB /* CustomTabbar.app */;
@@ -144,8 +141,7 @@
 			);
 			mainGroup = 89EC19AB2BC51FF900D74BEB;
 			packageReferences = (
-				8979C84B2BC76D86003D6591 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				8979C8502BC76DCF003D6591 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				89E879B02BCB9E9F003596D5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 89EC19B52BC51FF900D74BEB /* Products */;
 			projectDirPath = "";
@@ -335,6 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM2NVY3RQP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CustomTabbar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -362,6 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM2NVY3RQP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CustomTabbar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,7 +404,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8979C84B2BC76D86003D6591 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		89E879B02BCB9E9F003596D5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -414,31 +412,18 @@
 				minimumVersion = 5.9.1;
 			};
 		};
-		8979C8502BC76DCF003D6591 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.11.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8979C84C2BC76D86003D6591 /* Alamofire */ = {
+		89E879B12BCB9E9F003596D5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8979C84B2BC76D86003D6591 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 89E879B02BCB9E9F003596D5 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		8979C84E2BC76D86003D6591 /* AlamofireDynamic */ = {
+		89E879B32BCB9E9F003596D5 /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8979C84B2BC76D86003D6591 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 89E879B02BCB9E9F003596D5 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
-		};
-		8979C8512BC76DCF003D6591 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8979C8502BC76DCF003D6591 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import Kingfisher
 
 class subwayDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     

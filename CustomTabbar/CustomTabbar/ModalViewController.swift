@@ -51,8 +51,15 @@ class modalViewController: UIViewController {
     @IBOutlet weak var mainNearLable: UILabel!
     @IBOutlet weak var btnPrevSearchBar: UIButton!
     
+    // 위치 매니저 선언
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 위치 관련 설정
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() // 위치 권한 요청
         
         btnXMark.tintColor = .primary
         btnPrevSearchBar.tintColor = .blue
@@ -88,49 +95,14 @@ class modalViewController: UIViewController {
         }
     }
     
-    func fetchNearbySubwayStationAndUpdateUI() {
-        // 반경 내 근처 지하철 역을 가져오는 메서드 호출
-        let locationManager = LocationManager.shared
-        locationManager.startUpdatingCurrentLocation()
-        print("호출 된다")
-        
-
-        // API 호출
-        
-        let url = "https://api.odsay.com/v1/api/pointSearch"
-
-        let parameters: [String: Any] = [
-            "apiKey": "발급받은 apiKey",
-            "lang": 0,
-            "x": 127.0276,
-            "y": 37.49483,
-            "radius": 250,
-            "stationClass": 2
-        ]
-
-        AF.request(url, method: .get, parameters: parameters).responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                print("API 호출 성공: \(value)")
-                // 응답 데이터 처리
-            case .failure(let error):
-                print("API 호출 실패: \(error)")
-                // 에러 처리
-            }
-        }
-
-    }
-
-
-    
-    func findNearestSubwayStationName(from location: CLLocation) {
-        // ODSAY API를 통해 주변 지하철 역을 검색하고 가장 가까운 역을 찾기
+    // 주어진 위치를 기반으로 주변 지하철 역 정보를 가져오고 UI를 업데이트하는 메서드
+    private func fetchNearbySubwayStationAndUpdateUI(with location: CLLocation) {
         let responseManager = ResponseManager()
         responseManager.fetchNearbySubwayStations(currentLatitude: location.coordinate.latitude, currentLongitude: location.coordinate.longitude) { result in
             switch result {
             case .success(let searchResult):
                 // 검색 결과를 처리하여 가장 가까운 역을 가져옴
-                guard let nearestStation = searchResult.result.station.first else {
+                guard let nearestStation = searchResult.result?.station.first else {
                     print("Failed to find nearest subway station.")
                     return
                 }
@@ -145,6 +117,12 @@ class modalViewController: UIViewController {
         }
     }
     
+    // 위치 업데이트 및 권한 요청 관련 메서드
+    func fetchNearbySubwayStationAndUpdateUI() {
+        // 위치 업데이트 시작
+        locationManager.startUpdatingLocation()
+    }
+    
     @IBAction func actXMark(_ sender: UIButton) {
         print("actXMark called")
         self.dismiss(animated: true, completion: nil)
@@ -157,5 +135,26 @@ class modalViewController: UIViewController {
             
             self?.delegate?.modalDidDismiss()
         }
+    }
+}
+
+// CLLocationManagerDelegate 프로토콜 구현
+extension modalViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // 위치 업데이트가 발생했을 때 호출되는 메서드
+        guard let currentLocation = locations.last else {
+            print("Failed to get current location.")
+            return
+        }
+        // 주변 지하철 역 정보 가져오고 UI 업데이트
+        fetchNearbySubwayStationAndUpdateUI(with: currentLocation)
+        
+        // 위치 업데이트 종료
+        manager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // 위치 업데이트를 가져오지 못했을 때 호출되는 메서드
+        print("Failed to get current location: \(error.localizedDescription)")
     }
 }

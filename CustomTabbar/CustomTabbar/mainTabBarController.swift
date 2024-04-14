@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-import Kingfisher
+
 
 class mainTabBarController: UITabBarController {
 
